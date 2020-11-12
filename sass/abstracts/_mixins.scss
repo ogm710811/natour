@@ -1,0 +1,53 @@
+// MEDIA QUERY MANAGER MIXIN
+/*
+		Screen Range		:		Breakpoints		:		Description
+		0 - 600px 					phone							Phone screen
+		600 - 900px					tabPort						Tablet Portrait screen
+		900 - 1200px				tabLand						Tablet Landscape screen
+		1200 - 1800px													Desktop screen where our styles apply
+		1800 - +						bigDesktop				Big Desktop screen
+
+		IMPORTANT ABOUT MEDIA QUERY UNITS
+		- always use a relative unit based on the default Browser font-size
+		- for better performance in media queries use always em units
+		- 1em === the default Browser font-size === 16px
+		- how to calculate the unit for each breakpoint?
+			600 px 	=== 600 / 16 	=== 37.5em
+			900 px 	=== 900 / 16 	=== 56.25em
+			1200 px === 1200 / 16 === 75em
+			1800 px === 1800 / 16 === 112.5em
+		- each em unit will be calculated by the Browser to px and will be adapted to the font-size
+			that the user setup on the browser
+
+		ORDER OF RESPONSIVE IMPLEMENTATION BY SASS FOLDERS
+		1. base folder : _base _typography
+		3. layout folder : _grid _header _footer _nav
+		3. pages folder
+		4. components folder
+ */
+
+@mixin responsive($breakpoint) {
+	@if $breakpoint == phone {
+		@media (max-width: 37.5em) { @content }
+	}
+	@if $breakpoint == tabPort {
+		@media (max-width: 56.25em) { @content }
+	}
+	@if $breakpoint == tabLand {
+		@media (max-width: 75em) { @content }
+	}
+	@if $breakpoint == bigDesktop {
+		@media (min-width: 112.5em) { @content }
+	}
+}
+
+// OTHER MIXINS
+
+@mixin clearfix {
+	&::after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+}
+

@@ -1,0 +1,80 @@
+@import "../abstracts/mixins";
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+/*
+  The root font-size is set on the html selector.
+  The value of 10px is set to make our calculation easier when
+  converting px to rem. 1rem === root font-size === 10px
+  This way we avoid the calculation of rem based on the
+  default font-size of 16px.
+
+  IMPORTANT!! setting up the font-size in px is a bad practice
+  it must be set up in % to allow the user to change the default size.
+  what value in % to set up?
+  100% === 16px [default browser font-size]
+  62.5% === 10px value we want
+
+  IMPORTANT!! setting up the order of media queries
+  always order the media queries based on the design strategy that was defined
+  in this case the design strategy was DESKTOP FIRST so
+  the media queries must be order from big desktop to phones breakpoint
+  remember the CSS overwrite the values properties from top to bottom on each file
+
+*/
+html {
+	// MEDIA QUERIES ORDER FROM BIG DESKTOP to PHONE BREAKPOINTS
+	/*
+			font-size: 12px;
+			12px / 16px = 0.75
+	*/
+	@include responsive(bigDesktop) {
+		font-size: 75%;
+	}
+
+	/*
+			font-size: 10px;
+			10px / 16px = 0.625
+	*/
+	font-size: 62.5%;
+
+	/*
+			font-size: 9px;
+			9px / 16px = 0.5625
+	*/
+	@include responsive(tabLand) {
+		font-size: 56.25%;
+	}
+
+	/*
+			font-size: 8px;
+			8px / 16px = 0.5
+	*/
+	@include responsive(tabPort) {
+		font-size: 50%;
+	}
+
+	/*
+			font-size: 6px;
+			6px / 16px = 0.375
+	*/
+	@include responsive(phone) {
+		font-size: 37.5%;
+	}
+}
+
+body {
+	padding: 3rem;
+	box-sizing: border-box;
+
+	@include responsive(tabPort) {
+		padding: 0;
+	}
+
+}

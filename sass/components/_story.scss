@@ -1,0 +1,71 @@
+@import "../abstracts/variables";
+
+.story {
+	width: 75%;
+	margin: 0 auto;
+	box-shadow: 0 3rem 6rem rgba($color-black, .1);
+	background-color: rgba($color-white, .5);
+	border-radius: .3rem;
+	padding: 6rem 6rem 6rem 9rem;
+	font-size: $default-font-size;
+	transform: skewX(-12deg);
+
+	&__shape {
+		width: 15rem;
+		height: 15rem;
+		float: left;
+		position: relative;
+
+		// the shape-outside property only work if:
+		// element has dimensions (width , height) and it is floating
+		// circle func : first value = radius of circle,
+		// two next values position where element outside will be positioned
+		// respect to the circle shape
+		-webkit-shape-outside: circle(50% at 50% 50%);
+		shape-outside: circle(50% at 50% 50%);
+
+		// giving the circle shape to the element with clip-path
+		-webkit-clip-path: circle(50% at 50% 50%);
+		clip-path: circle(50% at 50% 50%);
+
+		// best way to separate an element that is floating is
+		// using transform, this will create a padding between
+		// the shape and the text
+		transform: translateX(-3rem) skewX(12deg);
+	}
+
+	&__img {
+		height: 100%;
+		// for centering the image in the circle shape
+		transform: translateX(-4rem) scale(1.4);
+		transition: all .5s;
+	}
+
+	&__caption {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, 0);
+		color: $color-white;
+		text-transform: uppercase;
+		font-size: 1.7rem;
+		text-align: center;
+		transition: all .5s;
+		opacity: 0;
+		backface-visibility: hidden;
+	}
+
+	&__text {
+		transform: skewX(12deg);
+	}
+
+	&:hover &__caption {
+		transform: translate(-50%, -50%);
+		opacity: 1;
+	}
+
+	&:hover &__img {
+		transform: translateX(-4rem) scale(1);
+		filter: blur(.3rem) brightness(80%);
+	}
+}

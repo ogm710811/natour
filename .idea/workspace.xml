@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3133690e-db0e-43b1-b0cf-b684ac930450" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="1jZD6KzRf9lwsVNdySbNqTBHNpy" />
+  <component name="ProjectViewState">
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="NewWatcherDialog.advanced.open" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$USER_HOME$/AppData/Roaming/npm/sass.cmd" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.stylelint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.stylelint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.stylelint" value="" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="watcher.settings" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3133690e-db0e-43b1-b0cf-b684ac930450" name="Default Changelist" comment="" />
+      <created>1604002544924</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1604002544924</updated>
+      <workItem from="1604002546252" duration="1343000" />
+      <workItem from="1604025888874" duration="411000" />
+      <workItem from="1604026311285" duration="11494000" />
+      <workItem from="1604331963643" duration="79890000" />
+      <workItem from="1605191094088" duration="16582000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2703" y="305" key="#File_Watchers" timestamp="1604002888426">
+      <screen x="0" y="0" width="3840" height="1040" />
+    </state>
+    <state x="2703" y="305" key="#File_Watchers/0.0.3840.1040@0.0.3840.1040" timestamp="1604002888426" />
+    <state x="2549" y="0" width="1100" height="1040" key="#HTML" timestamp="1604341781936">
+      <screen x="0" y="0" width="3840" height="1040" />
+    </state>
+    <state x="2549" y="0" width="1100" height="1040" key="#HTML/0.0.3840.1040@0.0.3840.1040" timestamp="1604341781936" />
+    <state x="2502" y="104" key="#SCSS" timestamp="1604080805196">
+      <screen x="0" y="0" width="3840" height="1040" />
+    </state>
+    <state x="2502" y="104" key="#SCSS/0.0.3840.1040@0.0.3840.1040" timestamp="1604080805196" />
+    <state x="2442" y="287" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604082466851">
+      <screen x="0" y="0" width="3840" height="1040" />
+    </state>
+    <state x="2442" y="287" key="#com.intellij.fileTypes.FileTypeChooser/0.0.3840.1040@0.0.3840.1040" timestamp="1604082466851" />
+    <state x="2574" y="255" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1604026892105">
+      <screen x="0" y="0" width="3840" height="1040" />
+    </state>
+    <state x="2574" y="255" key="#com.intellij.ide.macro.MacrosDialog/0.0.3840.1040@0.0.3840.1040" timestamp="1604026892105" />
+    <state x="2002" y="71" width="882" height="839" key="EditFileWatcherDialog" timestamp="1604029365667">
+      <screen x="0" y="0" width="3840" height="1040" />
+    </state>
+    <state x="2002" y="71" width="882" height="839" key="EditFileWatcherDialog/0.0.3840.1040@0.0.3840.1040" timestamp="1604029365667" />
+    <state x="2565" y="317" key="FileChooserDialogImpl" timestamp="1604026378125">
+      <screen x="0" y="0" width="3840" height="1040" />
+    </state>
+    <state x="2565" y="317" key="FileChooserDialogImpl/0.0.3840.1040@0.0.3840.1040" timestamp="1604026378125" />
+    <state x="1971" y="38" key="SettingsEditor" timestamp="1604029366691">
+      <screen x="0" y="0" width="3840" height="1040" />
+    </state>
+    <state x="1971" y="38" key="SettingsEditor/0.0.3840.1040@0.0.3840.1040" timestamp="1604029366691" />
+    <state x="2467" y="168" width="757" height="690" key="find.popup" timestamp="1604948196079">
+      <screen x="0" y="0" width="3840" height="1040" />
+    </state>
+    <state x="2467" y="168" width="757" height="690" key="find.popup/0.0.3840.1040@0.0.3840.1040" timestamp="1604948196079" />
+    <state x="2408" y="242" key="run.anything.popup" timestamp="1604683632219">
+      <screen x="0" y="0" width="3840" height="1040" />
+    </state>
+    <state x="2408" y="242" key="run.anything.popup/0.0.3840.1040@0.0.3840.1040" timestamp="1604683632219" />
+    <state x="2589" y="465" key="scopes" timestamp="1604026138669">
+      <screen x="0" y="0" width="3840" height="1040" />
+    </state>
+    <state x="2589" y="465" key="scopes/0.0.3840.1040@0.0.3840.1040" timestamp="1604026138669" />
+    <state x="2419" y="103" width="840" height="1034" key="search.everywhere.popup" timestamp="1604948203079">
+      <screen x="0" y="0" width="3840" height="1040" />
+    </state>
+    <state x="2419" y="103" width="840" height="1034" key="search.everywhere.popup/0.0.3840.1040@0.0.3840.1040" timestamp="1604948203079" />
+  </component>
+</project>

@@ -1,0 +1,198 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.nav {
+	&__checkbox {
+		display: none;
+	}
+
+	&__button {
+		// height & width of the button are a little higher
+		// to hide the green background
+		height: 7rem;
+		width: 7rem;
+		position: fixed;
+		cursor: pointer;
+
+		// top & right position a little lower than the background
+		// to avoid any green background in the edge
+		top: 6rem;
+		right: 6rem;
+		border-radius: 50%;
+		background-color: $color-white;
+		z-index: 2000;
+		box-shadow: 0 1rem 3rem rgba($color-black, .1);
+
+		@include responsive(tabPort) {
+			top: 3rem;
+			right: 3rem;
+		}
+	}
+
+	// ICON STYLE
+	&__icon {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+
+		&,
+		&::before,
+		&::after {
+			width: 3rem;
+			height: .2rem;
+			display: inline-block;
+			background-color: $color-grey-dark-1;
+		}
+
+		// in order to pseudo elements to display they need
+		// a content property define and also a display property
+		&::before,
+		&::after {
+			content: '';
+			// define position related with his parent element the span icon
+			position: absolute;
+			left: 0;
+			transition: all .2s;
+		}
+
+		&::before {
+			transform: translateY(-.8rem);
+		}
+
+		&::after {
+			transform: translateY(.8rem);
+		}
+	}
+
+	// causing animation on the icon when hovering the button
+	&__button:hover &__icon::before {
+		transform: translateY(-1rem);
+	}
+
+	&__button:hover &__icon::after {
+		transform: translateY(1rem);
+	}
+
+	// using checkbox-hack to implement the animation
+	// to create the close button in the icon
+	// IMPORTANT!! since the after and before pseudo elements
+	// depend in the size of the span icon we cannot disappear it
+	// so we need to change teh background color to transparent
+	&__checkbox:checked + &__button &__icon {
+		background-color: transparent;
+	}
+
+	// next on the animation is to rotate the before and after
+	// pseudo elements to create the close icon
+	&__checkbox:checked + &__button &__icon::before {
+		transform: rotate(135deg);
+	}
+
+	&__checkbox:checked + &__button &__icon::after {
+		transform: rotate(-135deg);
+	}
+
+
+	// ICON FUNCTIONALITY
+	// using checkbox-hack to implement the animation
+	// on both the background and the navigation
+	&__checkbox:checked ~ &__background {
+		transform: scale(80);
+	}
+
+	&__checkbox:checked ~ &__container {
+		opacity: 1;
+		width: 100%;
+	}
+
+	// the green background is coming from the
+	// circle button, so we need to give a circle shape as well
+	&__background {
+		height: 6rem;
+		width: 6rem;
+		position: fixed;
+		top: 6.5rem;
+		right: 6.5rem;
+		border-radius: 50%;
+		background-color: $color-primary;
+		// radial-gradient starts in the middle of the element and
+		// goes in all outside directions
+		background-image: radial-gradient($color-primary-light, $color-primary-dark);
+		z-index: 1000;
+		transition: transform 0.6s cubic-bezier(0.83, 0, 0.17, 1);
+
+		@include responsive(tabPort) {
+			top: 3.5rem;
+			right: 3.5rem;
+		}
+	}
+
+	&__container {
+		height: 100vh;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 1500;
+		opacity: 0;
+
+		// width === 0 avoid the pointer display when
+		// point the mouse over the page;
+		width: 0;
+		transition: all 0.6s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+	}
+
+	&__list {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		list-style: none;
+		text-align: center;
+	}
+
+	&__item {
+		margin: 1rem;
+	}
+
+	&__link {
+		color: $color-white;
+		&:link,
+		&:active {
+			display: inline-block;
+			font-size: 3rem;
+			font-weight: 300;
+			padding: 1rem 2rem;
+			text-decoration: none;
+			text-transform: uppercase;
+
+			// using solid color gradient technic
+			// to implement teh animation in the links
+			background-image: linear-gradient(
+											120deg,
+											transparent 0%,
+											transparent 50%,
+											$color-white 50%
+			);
+			// background-size === 230% cover the entire
+			// link when hover on it
+			background-size: 230%;
+			transition: all .4s;
+
+			span {
+				margin-right: 1.5rem;
+				display: inline-block;
+			}
+		}
+
+		&:hover,
+		&:active {
+			// with background-position we can make the
+			// animation in the links
+			background-position: 100%;
+			color: $color-primary;
+			transform: translateX(1rem);
+		}
+
+	}
+}
