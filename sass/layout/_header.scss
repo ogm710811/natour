@@ -15,14 +15,15 @@
 	-webkit-clip-path: polygon(0 0, 100% 0%, 100% 75vh, 0% 100%);
 	clip-path: polygon(0 0, 100% 0%, 100% 75vh, 0% 100%);
 
-	@include responsive(tabPort) {
-		-webkit-clip-path: polygon(0 0, 100% 0%, 100% 83vh, 0% 100%);
-		clip-path: polygon(0 0, 100% 0%, 100% 83vh, 0% 100%);
+	@include responsive(tabLand) {
+		-webkit-clip-path: polygon(0 0, 100% 0%, 100% 81vh, 0% 100%);
+		clip-path: polygon(0 0, 100% 0%, 100% 81vh, 0% 100%);
 	}
 
-	@include responsive(phone) {
-		-webkit-clip-path: polygon(0 0, 100% 0%, 100% 87vh, 0% 100%);
-		clip-path: polygon(0 0, 100% 0%, 100% 87vh, 0% 100%);
+	@include responsive(tabPort) {
+		height: 75vh;
+		-webkit-clip-path: polygon(0 0, 100% 0%, 100% 68vh, 0% 100%);
+		clip-path: polygon(0 0, 100% 0%, 100% 68vh, 0% 100%);
 	}
 
 	&__logo-box {

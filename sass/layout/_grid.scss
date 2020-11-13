@@ -35,7 +35,7 @@
 	}
 
 	&:not(:last-child) {
-		margin-bottom: $gutter-vertical;
+		margin-bottom: $gutter-vertical-large;
 
 		// giving a small gutter vertical
 		@include responsive(tabPort) {

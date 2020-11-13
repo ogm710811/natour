@@ -6,8 +6,14 @@
 	padding: 25rem 0;
 	margin-top: -20vh;
 
-	@include responsive(tabPort) {
-		padding: 20rem 0;
+	@include responsive(tabLand) {
+		margin-top: -15vh;
+		margin-bottom: 5rem;
+	}
+
+	@include responsive(phone) {
+		margin-top: -12vh;
+		padding: 20rem 1.3rem 25rem 1.3rem;
 	}
 }
 
@@ -23,7 +29,7 @@
 	margin-top: -11rem;
 
 	@include responsive(tabPort) {
-		padding: 15rem 0;
+		padding: 10rem 0;
 	}
 
 	// select direct child [row class in html]
@@ -77,8 +83,6 @@
 	background-size: cover;
 	border-radius: .3rem;
 	box-shadow: 0 1.5rem 6rem rgba($color-black, .2);
-
-	height: 50rem;
 
 	&__form {
 		width: 50%;
