@@ -1,3 +1,4 @@
+@import "../abstracts/mixins";
 @import "../abstracts/variables";
 
 .form {
@@ -80,6 +81,10 @@
 		cursor: pointer;
 		position: relative;
 		padding-left: 4rem;
+
+		@include responsive(phone) {
+			font-size: 1.3rem
+		}
 	}
 
 	&__radio-button {

@@ -1,3 +1,4 @@
+@import "../abstracts/mixins";
 @import "../abstracts/variables";
 
 .card {
@@ -13,6 +14,7 @@
 		position: absolute;
 		top: 0;
 		left: 0;
+		-webkit-backface-visibility: hidden;
 		backface-visibility: hidden;
 		border-radius: .3rem;
 		// in order the image doesn't hide the border-radius of the card at the top
@@ -184,5 +186,64 @@
 	&__price-value {
 		font-size: 6rem;
 		font-weight: 100;
+	}
+
+	// media query to identify if the user has a
+	// device where he can hover.
+	// This way if the user has for example a tablet that
+	// he can hover (has a mouse connected) the card element
+	// will display the rotation card otherwise the other one
+
+	// @include responsive(tabPort)
+	@media only screen and (max-width: 56.25em),
+				 only screen and (hover: none) {
+		// FUNCTIONALITY on media query
+		height: auto;
+		border-radius: .3rem;
+		background-color: $color-white;
+		box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+
+		&:hover &__side--front {
+			transform: rotateY(0);
+		}
+
+		&__details {
+			padding: 0 2rem;
+		}
+
+		&__side {
+			height: auto;
+			width: 100%;
+			// changing to relative position since we no longer have two sides
+			// in this screen breakpoint
+			position: relative;
+			box-shadow: none;
+
+
+			&--back {
+				// beginning on this breakpoint we don't want the back card to be rotated
+				transform: rotateY(0);
+				-webkit-clip-path: polygon(0 15%, 100% 0%, 100% 100%, 0% 100%);
+				clip-path: polygon(0 15%, 100% 0%, 100% 100%, 0% 100%);
+			}
+		}
+
+		// BACK SIDE STYLING on media query
+		&__cta {
+			position: relative;
+			top: 0;
+			left: 0;
+			width: 100%;
+			transform: translate(0);
+			padding: 6rem 4rem 4rem 4rem;
+		}
+
+		&__price-box {
+			margin-bottom: 3rem;
+		}
+
+		&__price-value {
+			font-size: 4.5rem;
+		}
 	}
 }

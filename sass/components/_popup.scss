@@ -1,3 +1,4 @@
+@import "../abstracts/mixins";
 @import "../abstracts/variables";
 
 .popup {
@@ -7,10 +8,17 @@
 	top: 0;
 	left: 0;
 	z-index: 3000;
-	background-color: rgba($color-black, .8);
 	opacity: 0;
 	visibility: hidden;
 	transition: all .3s;
+	background-color: rgba($color-black, .8);
+
+	//feature query to support for browsers
+	@supports (-webkit-backdrop-filter: blur(1rem)) or (backdrop-filter: blur(1rem)) {
+		background-color: rgba($color-black, .3);
+		-webkit-backdrop-filter: blur(1rem);
+		backdrop-filter: blur(1rem);
+	}
 
 	&__content {
 		width: 75%;
@@ -25,18 +33,39 @@
 		overflow: hidden;
 		display: table;
 		transition: all .5s .2s;
+
+		@include responsive(tabLand) {
+			width: 80%;
+		}
+
+		@include responsive(tabPort) {
+			width: 70%;
+		}
 	}
 
 	&__left {
-		width: 33.333333%;
+		width: 35.333333%;
 		display: table-cell;
+
+		@include responsive(tabLand) {
+			width: 47.333333%;
+		}
+
+		@include responsive(tabPort) {
+			display: none;
+		}
 	}
 
 	&__right {
-		width: 66.666667%;
+		width: 64.666667%;
+		height: auto;
 		display: table-cell;
 		vertical-align: middle;
 		padding: 3rem 5rem;
+
+		@include responsive(tabLand) {
+			width: 52.666667%;
+		}
 	}
 
 	&__img {
@@ -62,6 +91,12 @@
 		column-count: 2;
 		column-gap: 4rem;
 		column-rule: .1rem solid $color-grey-light-2;
+
+		@include responsive(tabLand) {
+			-moz-column-count: 1;
+			-webkit-column-count: 1;
+			column-count: 1;
+		}
 
 		// using hyphens property for the paragraph
 		// will add hyphens to the cut words in both columns
@@ -102,6 +137,5 @@
 				color: $color-primary;
 			}
 		}
-
 	}
 }

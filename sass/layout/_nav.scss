@@ -149,6 +149,10 @@
 		transform: translate(-50%, -50%);
 		list-style: none;
 		text-align: center;
+
+		@include responsive(phone) {
+			position: relative;
+		}
 	}
 
 	&__item {
